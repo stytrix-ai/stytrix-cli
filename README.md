@@ -36,15 +36,15 @@ Server URL (override with `STYTRIX_MCP_URL`): `https://www.stytrix.com/api/mcp`
 
 ## Use it from an agent
 
-Install the [StyTrix skill](https://github.com/hirosichen/stytrix-skills) and your agent can drive this CLI:
+Install the [StyTrix skill](https://github.com/stytrix-ai/stytrix-skills) and your agent can drive this CLI:
 
 ```bash
-npx skills add https://github.com/hirosichen/stytrix-skills --skill stytrix
+npx skills add https://github.com/stytrix-ai/stytrix-skills --skill stytrix
 ```
 
 ## Links
 
 - Website: https://www.stytrix.com
 - MCP docs: https://www.stytrix.com/mcp
-- Skill: https://github.com/hirosichen/stytrix-skills
+- Skill: https://github.com/stytrix-ai/stytrix-skills
 - Support: hello@stytrix.com

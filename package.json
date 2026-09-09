@@ -23,7 +23,7 @@
   "homepage": "https://www.stytrix.com/mcp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hirosichen/stytrix-cli.git"
+    "url": "https://github.com/stytrix-ai/stytrix-cli.git"
   },
   "license": "MIT",
   "dependencies": {

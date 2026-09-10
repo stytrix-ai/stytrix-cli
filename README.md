@@ -48,3 +48,7 @@ npx skills add https://github.com/stytrix-ai/stytrix-skills --skill stytrix
 - MCP docs: https://www.stytrix.com/mcp
 - Skill: https://github.com/stytrix-ai/stytrix-skills
 - Support: hello@stytrix.com
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

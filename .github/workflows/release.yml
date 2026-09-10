@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Verify tag matches package version
+        run: test "v$(node -p \"require('./package.json').version\")" = "$GITHUB_REF_NAME"
+
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test --if-present
+
+      - name: Pack release artifact
+        run: npm pack
+
+      - name: Attest release artifact
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: stytrix-*.tgz
+
+      - name: Publish to npm with provenance
+        run: npm publish stytrix-*.tgz --provenance

@@ -5,10 +5,11 @@ Design fashion with AI from your terminal — or let your coding agent do it. `s
 ## Quick start
 
 ```bash
-npx stytrix login          # opens your browser to sign in to StyTrix
-npx stytrix credits        # check your balance
-npx stytrix projects       # list your canvas projects
-npx stytrix generate --project <id> --prompt "an oversized camel wool trench coat, studio shot"
+npm install --global stytrix
+stytrix login          # opens your browser to sign in to StyTrix
+stytrix credits        # check your balance
+stytrix projects       # list your canvas projects
+stytrix generate --project <id> --prompt "an oversized camel wool trench coat, studio shot"
 ```
 
 That's it — the generated design lands live on your StyTrix canvas.
